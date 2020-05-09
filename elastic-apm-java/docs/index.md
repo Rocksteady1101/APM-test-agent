@@ -140,8 +140,8 @@ To have some metrics we need to call our REST service, we can do this using the 
 * [Apache JMeter](https://jmeter.apache.org/)
 
 For the next metrics that I will show you I am going to execute the following curl commands:
-* curl -X POST http://localhost:8080/api/v1/users -H "Content-Type: application/json" -d '{"name":"Cosmin Seceleanu","email":"cosmin.seceleanu@email.com"}'
-* curl -X POST http://localhost:8080/api/v1/users -H "Content-Type: application/json" -d '{"name":"Foo Bar","email":"foo@bar.com"}'
+* curl -X POST http://localhost:8080/api/v1/users -H "Content-Type: application/json" -d "{\"name\":\"Cosmin Seceleanu\",\"email\":\"cosmin.seceleanu@email.com\"}"
+* curl -X POST http://localhost:8080/api/v1/users -H "Content-Type: application/json" -d "{\"name\":\"Foo Bar\",\"email\":\"foo@bar.com\"}"
 * curl -X GET http://localhost:8080/api/v1/users/1
 * curl -X GET http://localhost:8080/api/v1/users/2
 * curl -X DELETE http://localhost:8080/api/v1/users/2
