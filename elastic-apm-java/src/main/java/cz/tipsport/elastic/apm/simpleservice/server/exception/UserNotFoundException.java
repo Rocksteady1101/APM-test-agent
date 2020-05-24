@@ -1,4 +1,4 @@
-package com.cosmin.tutorials.apm.exception;
+package cz.tipsport.elastic.apm.simpleservice.server.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

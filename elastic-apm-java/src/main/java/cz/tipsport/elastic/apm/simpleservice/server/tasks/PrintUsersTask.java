@@ -1,8 +1,8 @@
-package com.cosmin.tutorials.apm.tasks;
+package cz.tipsport.elastic.apm.simpleservice.server.tasks;
 
 import co.elastic.apm.api.CaptureSpan;
 import co.elastic.apm.api.CaptureTransaction;
-import com.cosmin.tutorials.apm.database.UserRepository;
+import cz.tipsport.elastic.apm.simpleservice.server.database.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class PrintUsersTask {
 
     @CaptureTransaction(type = "Task", value = "PrintUsers")
     private void doExecute() {
-        userRepository.findAll().forEach(user-> logger.debug(user.getEmail()));
+        userRepository.findAll().forEach(user-> logger.info(user.getEmail()));
         sleep();
     }
 

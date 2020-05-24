@@ -174,8 +174,8 @@ For this custom metric, I've used agent API to measure this method call's perfor
 package com.cosmin.tutorials.apm.service;
 
 import co.elastic.apm.api.CaptureSpan;
-import com.cosmin.tutorials.apm.database.User;
-import com.cosmin.tutorials.apm.database.UserRepository;
+import cz.tipsport.elastic.apm.simpleservice.server.database.User;
+import cz.tipsport.elastic.apm.simpleservice.server.database.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -250,7 +250,7 @@ package com.cosmin.tutorials.apm.tasks;
 
 import co.elastic.apm.api.CaptureSpan;
 import co.elastic.apm.api.CaptureTransaction;
-import com.cosmin.tutorials.apm.database.UserRepository;
+import cz.tipsport.elastic.apm.simpleservice.server.database.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

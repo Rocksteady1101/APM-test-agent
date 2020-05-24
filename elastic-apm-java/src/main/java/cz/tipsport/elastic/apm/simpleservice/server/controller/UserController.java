@@ -1,8 +1,8 @@
-package com.cosmin.tutorials.apm.controller;
+package cz.tipsport.elastic.apm.simpleservice.server.controller;
 
-import com.cosmin.tutorials.apm.exception.UserNotFoundException;
-import com.cosmin.tutorials.apm.database.User;
-import com.cosmin.tutorials.apm.service.UserService;
+import cz.tipsport.elastic.apm.simpleservice.server.exception.UserNotFoundException;
+import cz.tipsport.elastic.apm.simpleservice.server.database.User;
+import cz.tipsport.elastic.apm.simpleservice.server.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,10 +30,10 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<User> delete(@PathVariable("id") Integer id) {
         User user = userService.get(id).orElseThrow(UserNotFoundException::new);
         userService.delete(user.getId());
 
-        return new ResponseEntity(HttpStatus.OK);
+        return new <User>ResponseEntity<User>(HttpStatus.OK);
     }
 }

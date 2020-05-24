@@ -1,4 +1,4 @@
-package com.cosmin.tutorials.apm.database;
+package cz.tipsport.elastic.apm.simpleservice.server.database;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

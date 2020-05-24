@@ -1,4 +1,4 @@
-package com.cosmin.tutorials.apm.database;
+package cz.tipsport.elastic.apm.simpleservice.server.database;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.cosmin.tutorials.apm;
+package cz.tipsport.elastic.apm.simpleservice.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
