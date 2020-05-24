@@ -28,7 +28,7 @@ public class ClientUserTask {
 
     @CaptureTransaction(type = "ClientTask", value = "GetUsers")
     private void doExecute() {
-        logger.info(restService.getUserPlainJSON());
+        logger.info(restService.getUserWithUrlParameters().toString());
     }
 
 }

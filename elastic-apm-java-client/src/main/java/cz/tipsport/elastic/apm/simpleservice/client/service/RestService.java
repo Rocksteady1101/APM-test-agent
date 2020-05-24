@@ -24,22 +24,22 @@ public class RestService {
     }
 
     public String getUserPlainJSON() {
-        String url = "http://localhost:8080/api/v1/users";
+        String url = "http://localhost:8081/api/v1/users";
         return this.restTemplate.getForObject(url, String.class);
     }
 
     public User[] getUsersAsObject() {
-        String url = "http://localhost:8080/api/v1/users";
+        String url = "http://localhost:8081/api/v1/users";
         return this.restTemplate.getForObject(url, User[].class);
     }
 
     public User getUserWithUrlParameters() {
-        String url = "http://localhost:8080/api/v1/users/{id}";
+        String url = "http://localhost:8081/api/v1/users/{id}";
         return this.restTemplate.getForObject(url, User.class, 1);
     }
 
     public User getUserWithResponseHandling() {
-        String url = "http://localhost:8080/api/v1/users/{id}";
+        String url = "http://localhost:8081/api/v1/users/{id}";
         ResponseEntity<User> response = this.restTemplate.getForEntity(url, User.class, 1);
         if (response.getStatusCode() == HttpStatus.OK) {
             return response.getBody();
