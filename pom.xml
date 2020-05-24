@@ -13,6 +13,8 @@
     <modules>
         <module>spring-reactive</module>
         <module>elastic-apm-java</module>
+        <module>elastic-apm-java-client</module>
         <module>elastic-apm-jmx</module>
+
     </modules>
 </project>
