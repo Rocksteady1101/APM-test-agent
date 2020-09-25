@@ -20,13 +20,13 @@ public class ClientUserTask {
         this.restService = restService;
     }
 
-    @Scheduled(fixedDelayString = "5000")
+    @Scheduled(fixedDelayString = "500")
     public void execute() {
         logger.info("run scheduled test");
         doExecute();
     }
 
-    @CaptureTransaction(type = "ClientTask", value = "GetUsers")
+    @CaptureTransaction(type = "ClientTask", value = "GetUsersWithParameters")
     private void doExecute() {
         logger.info(restService.getUserWithUrlParameters().toString());
     }
